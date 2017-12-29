@@ -14,17 +14,10 @@
 		<script>
 			$(document).ready(function(){
 				$("#prev").click(function(){
-					//$("article").hide();
-					$("article").each(function() { 
-						if($(this).hasClass('active')) {
-							$(this).hide();
-							$(this).removeClass('active');
-						} else { 
-							//$(this.next()).show();
-							$(this).show();
-							$(this).addClass('active');
-						}
-					});
+					alert("Previous clicked");
+				});
+				$("#next").click(function(){
+					alert("Next clicked");
 				});
 			});
 		</script>
@@ -55,7 +48,7 @@
 		-->
 			<section id="post" class="wrapper bg-img" data-bg="RedShed1.jpg">
 				<div class="inner">
-					<article class="box active">
+					<article class="box">
 						<header>
 							<h2>Nibh non lobortis mus nibh</h2>
 							<p>01.01.2017</p>
@@ -74,27 +67,10 @@
 						<footer>
 							<ul class="actions">
 								<li><a href="#" id="prev" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
-								<!-- <li><button id="prev" class="button alt icon fa-chevron-left"><span class="label">Previous</span></button></li> -->
 								<li><a href="#" id="next" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
 							</ul>
 						</footer>
 					</article>
-
-					<article class="box" style="display: none;">
-							<header>
-								<h2>What a pain in the ass</h2>
-								<p>12.28.2017</p>
-							</header>
-							<div class="content">
-								<p>A adipiscing a ac aliquet elit a senectus feugiat litora condimentum dignissim ullamcorper conubia venenatis torquent consectetur dui aptent dignissim condimentum suspendisse. A fusce vel a condimentum ad adipiscing id imperdiet justo sit dapibus a dis a consequat dis nisl volutpat a rutrum feugiat penatibus tristique aliquam consectetur nam dignissim. Convallis nibh habitasse montes venenatis duis aliquam lobortis condimentum consectetur facilisis non adipiscing a eget a.</p>
-							</div>
-							<footer>
-								<ul class="actions">
-									<li><a href="#" id="prev" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
-									<li><a href="#" id="next" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
-								</ul>
-							</footer>
-						</article>
 				</div>
 			</section>
 
