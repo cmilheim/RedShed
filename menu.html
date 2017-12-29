@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Menu - The Red Shed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#prev").click(function(){
+					alert("Previous clicked");
+				});
+				$("#next").click(function(){
+					var hInfo = $(".box").find('header');
+					var hLength = hInfo.length;
+					var dInfo = $(".box").find('div');
+					var dLength = dInfo.length;
+					// To-Do: If hLength and dLength not equal, notify me
+					$(".box").find('header').each(function(index, element){
+						//alert(this.innerText);
+						if($(this).is(":visible")) {
+							// Do nothing if end of each elements
+							if (index === (hLength - 1)) {
+								return false;
+							}
+							$(this).hide();
+							$(this).next().show();
+							return false;
+						}
+					});
+					$(".box").find('div').each(function(index, element){
+						if($(this).is(":visible")) {
+							if (index === (dLength - 1)) {
+								return false;
+							}
+							$(this).hide();
+							$(this).next().show();
+							return false;
+						}
+					});
+					$('html,body').animate({ scrollTop: 0 }, 'slow');
+				});
+			});
+		</script>
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<!--<div class="logo"><a href="index.html">Road Trip <span>by TEMPLATED</span></a></div>-->
+				<div class="logo"><a href="index.html">The Red Shed <span>Home</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="info.html">Info</a></li>
+					<li><a href="menu.html">Menu</a></li>
+				</ul>
+			</nav>
+
+		<!-- Content -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+		<section id="post" class="wrapper bg-img" data-bg="RedShed1.jpg">
+			<!--<div class="row">-->
+				<article class="box">
+				<div class="row">
+					<div class="4u 12u$(medium)">
+						<h3>Barbecue</h3>
+						<p>Red Shed dry rubbed and smoked to perfect with Mark's secret sauces served on the side.*</p>
+						<p>Sides: Cole Slaw, Potato Salad, Baked Beans, Black Beans and Rice, Smoked Mac & Cheese, Chips</p>
+						<p>*Made fresh daily from scratch</p>
+						<h3>Sandwiches:</h3>
+						<p>Pulled Pork or Pulled Chicken - Served with 1 or 2 sides</p>
+						<p>Rib Sandwich - Served with 2 sides and a drink</p>
+						<h3>Plates:</h3>
+						<p>Pulled Pork or Pulled Chicken - Served with 1 or 2 sides</p>
+						<p>Rib Plate - Served with 2 sides and a drink</p>
+						<h3>Sliders:</h3>
+						<p>3 Toasted King Hawaiian Rolls with Pulled Pork, Pulled Chicken, or Rib Meat - Served with 2 sides and a drink</p>
+					</div>
+					<div class="4u 12u$(medium)">
+						<h3>Fresh Smoked Country Sausage</h3>
+						<p>With or Without a Bun - Served with 1 side</p>
+						<h3>The O!Ryan</h3>
+						<p>Country Sausage Topped with Pulled Pork - Served with 1 side and a drink</p>
+					</div>
+					<div class="4u$ 12u$(medium)">
+						<h3>Accumsan montes viverra</h3>
+						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+					</div>
+				<div class="row">
+				</article>
+			<!--</div>-->
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h2>Contact Us</h2>
+					
+					<div id="main" class="container">
+						<div class="row">
+							<div class="5u 12u$(small)">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438.0047512527126!2d-84.12724458444221!3d30.492616004215314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ec5b612759d9f1%3A0x9a964412023e13b9!2s3031+Crump+Rd%2C+Tallahassee%2C+FL+32309!5e0!3m2!1sen!2sus!4v1512403308584" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+							<div class="3u 12u$(small)">
+								<h3>Hours of Operation</h3>
+								<div class="row">
+									<div class="column">
+										<p>
+											Sunday<br>
+											Monday<br>
+											Tuesday<br>
+											Wednesday<br>
+											Thursday<br>
+											Friday<br>
+											Saturday
+										</p>
+									</div>
+									<div class="column">
+										<p>
+											11:00 AM - 7:00 PM<br>
+											CLOSED<br>
+											CLOSED<br>
+											CLOSED<br>
+											11:00 AM - 7:00 PM<br>
+											11:00 AM - 7:00 PM<br>
+											11:00 AM - 7:00 PM<br>
+										</p>
+									</div>
+								</div>
+									<ul class="icons">
+										<li><a href="https://twitter.com/red_shed_tally" target="_blank" class="icon round fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://www.facebook.com/theredshedtally" target="_blank" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="https://www.instagram.com/theredshedtally/" target="_blank"  class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+
+					<form action="imemail/imEmailForm.php" method="post" enctype="multipart/form-data">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
