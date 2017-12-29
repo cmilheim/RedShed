@@ -14,7 +14,30 @@
 		<script>
 			$(document).ready(function(){
 				$("#prev").click(function(){
-					alert("Previous clicked");
+					//alert("Previous clicked");
+					$(".box").find('header').each(function(index, element){
+						if($(this).is(":visible")) {
+							// Do nothing if first element
+							if (index === 0) {
+								return false;
+							}
+							$(this).hide();
+							$(this).prev().show();
+							return false;
+						}
+					});
+					$(".box").find('div').each(function(index, element){
+						if($(this).is(":visible")) {
+							// Do nothing if first element
+							if (index === 0) {
+								return false;
+							}
+							$(this).hide();
+							$(this).prev().show();
+							return false;
+						}
+					});
+					$('html,body').animate({ scrollTop: 0 }, 'slow');
 				});
 				$("#next").click(function(){
 					var hInfo = $(".box").find('header');
@@ -150,7 +173,7 @@
 						</div>
 					</div>
 
-					<form action="#" method="post">
+					<form action="imemail/imEmailForm.php" method="post" enctype="multipart/form-data">
 
 						<div class="field half first">
 							<label for="name">Name</label>
@@ -175,11 +198,9 @@
 						<li><a href="https://www.instagram.com/theredshedtally/" target="_blank" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
 					</ul>
 
-					<!--
 					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+						&copy; The Red Shed. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
 					</div>
-					-->
 
 				</div>
 			</footer>
