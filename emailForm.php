@@ -28,5 +28,10 @@ if (isset($_POST['send'])) {
             <h1>Oops!</h1>
             Sorry, there was a problem sending your message.
             <?php } ?>
+            <script>
+                var timer = setTimeout(function() {
+                    window.location='index.html'
+                }, 3000);
+            </script>
         </body>
     </html>
